@@ -1,7 +1,7 @@
 import 'dart:io';
 
 main() {
-  int? number = int.tryParse(stdin.readLineSync()!);
+  int number = int.tryParse(stdin.readLineSync());
   if (number != null) {
     /* if (number > 0) {
       print("positive");

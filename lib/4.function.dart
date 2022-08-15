@@ -15,13 +15,13 @@ void sayHello(){
 
 //OPTIONAL NAMED PARAMETER
 // { }
-String say(String from, String message, {String? to, String? appName}) {
+String say(String from, String message, {String to, String appName}) {
   return "$from say $message ${(to != null) ? "to $to" : ""} ${(appName != null) ? "via $appName" : ""}";
 }
 
 //OPTIONAL POSITIONAL PARAMETER
 // [ ]
-String say2(String from, String message, [String? to, String? appName]) {
+String say2(String from, String message, [String to, String appName]) {
   return "$from say $message ${(to != null) ? "to $to" : ""} ${(appName != null) ? "via $appName" : ""}";
 }
 

@@ -1,27 +1,25 @@
-class Rectangle{
-  double? _width, height;
+class Rectangle {
+  double _width, _height;
 
   /// can use field set as property
-  set width(double value){
-    if(_width !=null){
-      if(_width! < 0){
-        value *= -1;
-      }
+  set width(double value) {
+    if (value < 0) {
+      value *= -1;
     }
-    _width = value;
+    width = value;
   }
 
   /// or using height setter old
-  void setHeight(double value){
-    if(height !=null){
-      if(height! < 0){
-        value *= -1;
-      }
+  void setHeight(double value) {
+    if (value < 0) {
+      value *= -1;
     }
-    height = value;
+    _height = value;
   }
 
-  double area(){
-    return _width! * height!;
+ /* double? getHeight() {
+    return height ?? 0.0;
   }
+*/
+  double get area => _width * _height;
 }
