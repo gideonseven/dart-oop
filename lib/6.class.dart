@@ -1,5 +1,6 @@
 
 import 'dart:io';
+import 'class/Rectangle.dart';
 
 main(){
   Rectangle rectangle1, rectangle2;
@@ -15,15 +16,8 @@ main(){
   rectangle2.width = double.tryParse(stdin.readLineSync()!) ;
   rectangle2.height = double.tryParse(stdin.readLineSync()!) ;
 
-  areaRectangle1 = rectangle1.doCalculate()!;
-  areaRectangle2 = rectangle2.doCalculate()!;
+  areaRectangle1 = rectangle1.area()!;
+  areaRectangle2 = rectangle2.area()!;
 
   print((areaRectangle1 + areaRectangle2));
-}
-
-class Rectangle{
-  double? width, height;
-  double? doCalculate(){
-    return width! * height!;
-  }
 }
