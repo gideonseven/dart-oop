@@ -25,6 +25,12 @@ String say2(String from, String message, [String? to, String? appName]) {
   return "$from say $message ${(to != null) ? "to $to" : ""} ${(appName != null) ? "via $appName" : ""}";
 }
 
+double luas_segiempat(double panjang, double lebar) => panjang * lebar;
+
+int doMathOperator (int number1, int number2, Function(int, int) operator){
+  return operator(number1, number2);
+}
+
 main() {
   /*var width = double.tryParse(stdin.readLineSync()!);
   var height = double.tryParse(stdin.readLineSync()!);
@@ -37,4 +43,12 @@ main() {
   print("OPTIONAL POSITIONAL EX1 -> ${say2("John", "YO BRO!!!")}");
   print(
       "OPTIONAL POSITIONAL EX2->  ${say2("John", "YO BRO!!!", "Budi", "IG")}");
+
+  print(luas_segiempat(5, 6));
+  
+  Function f= luas_segiempat;
+  print(f(6.0, 5.0));
+
+
+  print(doMathOperator(5, 12, (a, b) => a*b));
 }
