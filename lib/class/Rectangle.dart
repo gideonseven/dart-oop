@@ -1,7 +1,7 @@
 class Rectangle{
   double? _width, height;
 
-  /// can use width set as parameter
+  /// can use field set as property
   set width(double value){
     if(_width !=null){
       if(_width! < 0){
