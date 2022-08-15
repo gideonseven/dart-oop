@@ -27,6 +27,7 @@ String say2(String from, String message, [String? to, String? appName]) {
 
 double luas_segiempat(double panjang, double lebar) => panjang * lebar;
 
+/// Function -> becomes anonymous function
 int doMathOperator (int number1, int number2, Function(int, int) operator){
   return operator(number1, number2);
 }
